@@ -43,43 +43,43 @@
             // 
             // txtServerIP
             // 
-            txtServerIP.Location = new Point(12, 37);
+            txtServerIP.Location = new Point(12, 33);
             txtServerIP.Name = "txtServerIP";
-            txtServerIP.Size = new Size(100, 25);
+            txtServerIP.Size = new Size(100, 23);
             txtServerIP.TabIndex = 0;
             txtServerIP.Text = "127.0.0.1";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(12, 17);
+            label1.Location = new Point(12, 15);
             label1.Name = "label1";
-            label1.Size = new Size(83, 17);
+            label1.Size = new Size(74, 15);
             label1.TabIndex = 1;
             label1.Text = "Ziel Server IP";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(132, 17);
+            label2.Location = new Point(132, 15);
             label2.Name = "label2";
-            label2.Size = new Size(32, 17);
+            label2.Size = new Size(29, 15);
             label2.TabIndex = 3;
             label2.Text = "Port";
             // 
             // txtPortNr
             // 
-            txtPortNr.Location = new Point(132, 37);
+            txtPortNr.Location = new Point(132, 33);
             txtPortNr.Name = "txtPortNr";
-            txtPortNr.Size = new Size(100, 25);
+            txtPortNr.Size = new Size(100, 23);
             txtPortNr.TabIndex = 2;
             txtPortNr.Text = "50000";
             // 
             // btnConnect
             // 
-            btnConnect.Location = new Point(249, 37);
+            btnConnect.Location = new Point(249, 33);
             btnConnect.Name = "btnConnect";
-            btnConnect.Size = new Size(75, 26);
+            btnConnect.Size = new Size(75, 23);
             btnConnect.TabIndex = 4;
             btnConnect.Text = "Connect";
             btnConnect.UseVisualStyleBackColor = true;
@@ -87,26 +87,26 @@
             // 
             // txtDataToServer
             // 
-            txtDataToServer.Location = new Point(383, 132);
+            txtDataToServer.Location = new Point(383, 116);
             txtDataToServer.Multiline = true;
             txtDataToServer.Name = "txtDataToServer";
-            txtDataToServer.Size = new Size(300, 154);
+            txtDataToServer.Size = new Size(300, 136);
             txtDataToServer.TabIndex = 5;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(383, 112);
+            label3.Location = new Point(383, 99);
             label3.Name = "label3";
-            label3.Size = new Size(104, 17);
+            label3.Size = new Size(92, 15);
             label3.TabIndex = 6;
             label3.Text = "Data zum Server";
             // 
             // btnSend
             // 
-            btnSend.Location = new Point(383, 292);
+            btnSend.Location = new Point(383, 258);
             btnSend.Name = "btnSend";
-            btnSend.Size = new Size(75, 26);
+            btnSend.Size = new Size(75, 23);
             btnSend.TabIndex = 7;
             btnSend.Text = "Send";
             btnSend.UseVisualStyleBackColor = true;
@@ -114,18 +114,18 @@
             // 
             // txtDataFromServer
             // 
-            txtDataFromServer.Location = new Point(12, 132);
+            txtDataFromServer.Location = new Point(12, 116);
             txtDataFromServer.Multiline = true;
             txtDataFromServer.Name = "txtDataFromServer";
-            txtDataFromServer.Size = new Size(297, 154);
+            txtDataFromServer.Size = new Size(297, 136);
             txtDataFromServer.TabIndex = 8;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(12, 112);
+            label4.Location = new Point(12, 99);
             label4.Name = "label4";
-            label4.Size = new Size(105, 17);
+            label4.Size = new Size(93, 15);
             label4.TabIndex = 9;
             label4.Text = "Data vom Server";
             // 
@@ -134,7 +134,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
             label5.ForeColor = Color.OrangeRed;
-            label5.Location = new Point(12, 363);
+            label5.Location = new Point(12, 320);
             label5.Name = "label5";
             label5.Size = new Size(200, 86);
             label5.TabIndex = 13;
@@ -142,9 +142,9 @@
             // 
             // ClientForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 17F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 510);
+            ClientSize = new Size(800, 450);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(txtDataFromServer);

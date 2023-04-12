@@ -19,24 +19,16 @@ namespace Client
         public event EventHandler<string> DataReceived;
         public event EventHandler<string> Error;
 
-        /// <summary>
-        /// Creates a new instance of the Client class with the specified IP address and port number.
-        /// </summary>
-        /// <param name="ipAddress">The IP address of the server to connect to.</param>
-        /// <param name="portNum">The port number of the server to connect to.</param>
-        public Client(IPAddress iPAddress, int portNum)
-        {
-            this.iPAddress = iPAddress;
-            this.portNum = portNum;
-            server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-        }
 
         /// <summary>
-        /// Connects the client to the server.
+        /// Establishes a connection to a remote host using the provided IP address and port number.
         /// </summary>
-        public void Connect()
+        /// <param name="iPAddress">The IP address of the remote host to connect to.</param>
+        /// <param name="portNum">The port number to use for the connection.</param>
+        public void Connect(IPAddress iPAddress, int portNum)
         {
             endPoint = new IPEndPoint(iPAddress, portNum);
+            server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             server.Connect(endPoint);
             Thread receiveThread = new Thread(ReceiveData);
             receiveThread.Start();
@@ -113,8 +105,5 @@ namespace Client
             server?.Close();
         }
     }
-
-}
-
 
 }

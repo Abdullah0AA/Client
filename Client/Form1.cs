@@ -12,15 +12,14 @@ namespace Client
         private IPAddress iPAddress;
         private int PORT_NUM;
 
-  
+
 
 
         public ClientForm()
         {
-            InitializeComponent();
-            PORT_NUM = Convert.ToInt32(txtPortNr.Text);
-            iPAddress = IPAddress.Parse(txtServerIP.Text);
-            client = new Client(iPAddress, PORT_NUM);
+            InitializeComponent(); 
+
+            client = new Client();
 
             client.DataReceived += onDataReceived;
             client.Error += OnError;
@@ -29,7 +28,9 @@ namespace Client
 
         private void btnConnect_Click(object sender, EventArgs e)
         {
-            client.Connect();
+            iPAddress = IPAddress.Parse(txtServerIP.Text);
+            PORT_NUM = Convert.ToInt32(txtPortNr.Text);
+            client.Connect(iPAddress, PORT_NUM);
         }
         private void OnError(object? sender, string message)
         {
@@ -50,6 +51,5 @@ namespace Client
             client.SendData(txtDataToServer.Text);
 
         }
-
     }
 }
