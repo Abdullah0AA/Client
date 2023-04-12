@@ -38,6 +38,7 @@
             btnSend = new Button();
             txtDataFromServer = new TextBox();
             label4 = new Label();
+            label5 = new Label();
             SuspendLayout();
             // 
             // txtServerIP
@@ -56,7 +57,6 @@
             label1.Size = new Size(83, 17);
             label1.TabIndex = 1;
             label1.Text = "Ziel Server IP";
-            label1.Click += label1_Click;
             // 
             // label2
             // 
@@ -129,11 +129,23 @@
             label4.TabIndex = 9;
             label4.Text = "Data vom Server";
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.ForeColor = Color.OrangeRed;
+            label5.Location = new Point(12, 363);
+            label5.Name = "label5";
+            label5.Size = new Size(200, 86);
+            label5.TabIndex = 13;
+            label5.Text = "Client";
+            // 
             // ClientForm
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 510);
+            Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(txtDataFromServer);
             Controls.Add(btnSend);
@@ -146,7 +158,6 @@
             Controls.Add(txtServerIP);
             Name = "ClientForm";
             Text = "Client";
-            Load += ClientForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -163,5 +174,6 @@
         private Button btnSend;
         private TextBox txtDataFromServer;
         private Label label4;
+        private Label label5;
     }
 }
