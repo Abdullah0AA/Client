@@ -44,13 +44,16 @@ namespace Client
             {
                 try
                 {
-                    // Receive data from server
-                    data = new byte[server.Available];
-                    bytesReceived = server.Receive(data);
-                    string message = Encoding.ASCII.GetString(data, 0, bytesReceived);
+                    if (server.Available > 0)
+                    {
+                        // Receive data from server
+                        data = new byte[server.Available];
+                        bytesReceived = server.Receive(data);
+                        string message = Encoding.ASCII.GetString(data, 0, bytesReceived);
 
-                    // Raise DataReceived event with received message
-                    OnDataReceived(message);
+                        // Raise DataReceived event with received message
+                        OnDataReceived(message);
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -103,6 +106,7 @@ namespace Client
         public void Stop()
         {
             server?.Close();
+            
         }
     }
 

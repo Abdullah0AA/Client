@@ -17,7 +17,7 @@ namespace Client
 
         public ClientForm()
         {
-            InitializeComponent(); 
+            InitializeComponent();
 
             client = new Client();
 
@@ -50,6 +50,15 @@ namespace Client
 
             client.SendData(txtDataToServer.Text);
 
+        }
+
+        private void ClientForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Notify the server that the client is disconnecting
+            
+            client.SendData("disconnect");
+
+         
         }
     }
 }
