@@ -55,10 +55,10 @@ namespace Client
         private void ClientForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             // Notify the server that the client is disconnecting
-            
+
             client.SendData("disconnect");
 
-         
+
         }
     }
 }
